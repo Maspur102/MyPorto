@@ -1,14 +1,30 @@
 {% extends 'base.html' %}
 {% block content %}
-<section class="py-12 px-4 min-h-[80vh]">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-10">Keahlian (Tech Stack)</h2>
-        <div class="flex flex-wrap justify-center gap-4">
-            <span class="px-6 py-3 bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-100 dark:border-gray-700">Python</span>
-            <span class="px-6 py-3 bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-100 dark:border-gray-700">Flask</span>
-            <span class="px-6 py-3 bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-100 dark:border-gray-700">Tailwind CSS</span>
-            <span class="px-6 py-3 bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-100 dark:border-gray-700">Git / GitHub</span>
-            <span class="px-6 py-3 bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-100 dark:border-gray-700">Termux</span>
+<section class="py-12 px-6 max-w-5xl mx-auto min-h-[75vh] flex flex-col justify-center">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">Tech Stack & Keahlian</h2>
+        <div class="w-16 h-1 bg-teal-500 mx-auto rounded-full mb-6"></div>
+        <p class="text-slate-500 dark:text-slate-400">Teknologi dan alat yang sering saya gunakan dalam keseharian.</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <div class="group flex flex-col items-center p-6 bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 rounded-2xl hover:shadow-lg hover:border-teal-200 dark:hover:border-teal-900/50 transition-all duration-300">
+            <span class="text-lg font-semibold text-slate-700 dark:text-slate-200 group-hover:text-teal-600 dark:group-hover:text-teal-400">Python</span>
+        </div>
+        <div class="group flex flex-col items-center p-6 bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 rounded-2xl hover:shadow-lg hover:border-teal-200 dark:hover:border-teal-900/50 transition-all duration-300">
+            <span class="text-lg font-semibold text-slate-700 dark:text-slate-200 group-hover:text-teal-600 dark:group-hover:text-teal-400">Flask</span>
+        </div>
+        <div class="group flex flex-col items-center p-6 bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 rounded-2xl hover:shadow-lg hover:border-teal-200 dark:hover:border-teal-900/50 transition-all duration-300">
+            <span class="text-lg font-semibold text-slate-700 dark:text-slate-200 group-hover:text-teal-600 dark:group-hover:text-teal-400">Flutter</span>
+        </div>
+        <div class="group flex flex-col items-center p-6 bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 rounded-2xl hover:shadow-lg hover:border-teal-200 dark:hover:border-teal-900/50 transition-all duration-300">
+            <span class="text-lg font-semibold text-slate-700 dark:text-slate-200 group-hover:text-teal-600 dark:group-hover:text-teal-400">Tailwind CSS</span>
+        </div>
+        <div class="group flex flex-col items-center p-6 bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 rounded-2xl hover:shadow-lg hover:border-teal-200 dark:hover:border-teal-900/50 transition-all duration-300">
+            <span class="text-lg font-semibold text-slate-700 dark:text-slate-200 group-hover:text-teal-600 dark:group-hover:text-teal-400">Termux & Acode</span>
+        </div>
+        <div class="group flex flex-col items-center p-6 bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 rounded-2xl hover:shadow-lg hover:border-teal-200 dark:hover:border-teal-900/50 transition-all duration-300">
+            <span class="text-lg font-semibold text-slate-700 dark:text-slate-200 group-hover:text-teal-600 dark:group-hover:text-teal-400">Git & GitHub</span>
         </div>
     </div>
 </section>

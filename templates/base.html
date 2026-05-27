@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Web</title>
+    <title>Purnama Raharja - Portofolio</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,22 +13,16 @@
     <script>
         tailwind.config = {
             darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], } } }
         }
     </script>
-    
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-200 transition-colors duration-300 antialiased selection:bg-teal-500 selection:text-white">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-200 transition-colors duration-300 antialiased selection:bg-teal-500 selection:text-white flex flex-col min-h-screen">
 
     <nav class="fixed w-full bg-white/70 dark:bg-slate-900/70 backdrop-blur-lg border-b border-slate-200/50 dark:border-slate-800/50 z-50 transition-all">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center relative">
+            
             <a href="{{ url_for('index') }}" class="text-xl font-bold tracking-tight text-slate-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
                 MyPorto<span class="text-teal-500">.</span>
             </a>
@@ -46,20 +40,20 @@
                     <button id="theme-toggle" class="p-2.5 rounded-full text-slate-500 bg-slate-100 dark:bg-slate-800 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
                         🌓
                     </button>
-                    <button id="hamburger-btn" class="md:hidden p-2.5 rounded-full text-slate-500 bg-slate-100 dark:bg-slate-800 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+                    <button id="hamburger-btn" class="md:hidden p-2.5 rounded-full text-slate-500 bg-slate-100 dark:bg-slate-800 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all focus:outline-none focus:ring-2 focus:ring-teal-500">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
                 </div>
             </div>
-        </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800">
-            <div class="flex flex-col px-6 py-4 space-y-3">
-                <a href="{{ url_for('index') }}" class="mobile-link block text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-teal-600">Beranda</a>
-                <a href="{{ url_for('about') }}" class="mobile-link block text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-teal-600">Tentang</a>
-                <a href="{{ url_for('skills') }}" class="mobile-link block text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-teal-600">Keahlian</a>
-                <a href="{{ url_for('projects') }}" class="mobile-link block text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-teal-600">Proyek</a>
-                <a href="{{ url_for('contact') }}" class="mobile-link block text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-teal-600">Kontak</a>
+            <div id="mobile-menu" class="hidden absolute top-16 right-6 w-52 bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl border border-slate-200/50 dark:border-slate-700/50 rounded-2xl shadow-2xl overflow-hidden z-50">
+                <div class="flex flex-col p-2 space-y-1">
+                    <a href="{{ url_for('index') }}" class="mobile-link px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-teal-50 hover:text-teal-600 dark:hover:bg-slate-700/50 dark:hover:text-teal-400 transition-colors">Beranda</a>
+                    <a href="{{ url_for('about') }}" class="mobile-link px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-teal-50 hover:text-teal-600 dark:hover:bg-slate-700/50 dark:hover:text-teal-400 transition-colors">Tentang</a>
+                    <a href="{{ url_for('skills') }}" class="mobile-link px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-teal-50 hover:text-teal-600 dark:hover:bg-slate-700/50 dark:hover:text-teal-400 transition-colors">Keahlian</a>
+                    <a href="{{ url_for('projects') }}" class="mobile-link px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-teal-50 hover:text-teal-600 dark:hover:bg-slate-700/50 dark:hover:text-teal-400 transition-colors">Proyek</a>
+                    <a href="{{ url_for('contact') }}" class="mobile-link px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-teal-50 hover:text-teal-600 dark:hover:bg-slate-700/50 dark:hover:text-teal-400 transition-colors">Kontak</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -76,13 +70,13 @@
         {% endwith %}
     </div>
 
-    <main class="pt-24 pb-12">
+    <main class="pt-24 pb-12 flex-grow">
         {% block content %}{% endblock %}
     </main>
 
-    <footer class="border-t border-slate-200 dark:border-slate-800/50 mt-auto">
-        <div class="max-w-6xl mx-auto px-6 py-8 text-center text-sm text-slate-500 dark:text-slate-400">
-            <p>&copy; 2026 Rifky Raihan. Dibuat dengan Flask & Tailwind.</p>
+    <footer class="border-t border-slate-200 dark:border-slate-800/50 py-8 mt-auto">
+        <div class="max-w-6xl mx-auto px-6 text-center text-sm text-slate-500 dark:text-slate-400">
+            <p>&copy; 2026 Purnama Raharja. Dibuat dengan Flask & Tailwind.</p>
         </div>
     </footer>
 

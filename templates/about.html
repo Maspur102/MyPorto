@@ -1,11 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
-<section class="py-12 px-4 max-w-4xl mx-auto min-h-[80vh]">
-    <h2 class="text-3xl font-bold text-center mb-8">Tentang Saya</h2>
-    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
-        <p class="text-center text-gray-700 dark:text-gray-300 leading-relaxed">
-            Saya adalah seorang pengembang perangkat lunak yang berdedikasi. Saya suka memecahkan masalah kompleks dan mempelajari teknologi baru. Pendekatan saya adalah tetap efisien dan produktif, bahkan jika itu berarti ngoding secara mobile menggunakan Termux dan Acode.
-        </p>
+<section class="py-12 px-6 max-w-4xl mx-auto min-h-[75vh] flex flex-col justify-center">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">Tentang Saya</h2>
+        <div class="w-16 h-1 bg-teal-500 mx-auto rounded-full"></div>
+    </div>
+
+    <div class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-xl p-8 md:p-10 rounded-3xl shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-700/50 relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-32 h-32 bg-teal-500/10 rounded-full blur-2xl"></div>
+        
+        <div class="relative z-10 text-slate-600 dark:text-slate-300 leading-relaxed text-lg space-y-6">
+            <p>
+                Halo! Saya <strong>Purnama Raharja</strong>, seorang mahasiswa Teknik Informatika yang memiliki hasrat tinggi dalam membangun perangkat lunak yang andal.
+            </p>
+            <p>
+                Bagi saya, keterbatasan perangkat bukanlah sebuah halangan. Saya terbiasa menulis kode, mengelola lingkungan server, hingga menyusun arsitektur sistem secara langsung dari perangkat <em>mobile</em> menggunakan alat seperti Termux dan Acode. Ini melatih saya untuk menjadi <em>problem solver</em> yang adaptif dan efisien di segala kondisi.
+            </p>
+            <p>
+                Fokus utama saya meliputi pengembangan backend, arsitektur aplikasi mobile, serta pengolahan data digital.
+            </p>
+        </div>
     </div>
 </section>
 {% endblock %}
