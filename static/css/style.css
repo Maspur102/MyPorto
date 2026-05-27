@@ -1,0 +1,4 @@
+/* Mengaktifkan Smooth Scrolling untuk seluruh halaman */
+html {
+    scroll-behavior: smooth;
+}
